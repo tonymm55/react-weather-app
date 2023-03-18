@@ -1,12 +1,12 @@
-// import logo from './logo.svg';
-import './App.css';
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/jsx-filename-extension */
+import "./App.css";
 
 function App() {
   return (
     <div className="Prop">
       <header className="App-header">
-        <h1>Weather App Header from App.js</h1>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <h1>Weather Application</h1>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          My Weather Application      
+          My Weather Application
         </a>
       </header>
     </div>
