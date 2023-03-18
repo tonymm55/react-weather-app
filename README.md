@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A weather forecast app, create using React. 
+
+The app uses the Open Weather API to retrieve and display 5-day weather forecast data for towns and cities in the United Kingdom.
+It includes detailed information such as: minimum and maximum temperature, humidity...
 
 ## Available Scripts
 
