@@ -3,7 +3,6 @@
 import "../styles/App.css";
 import LocationDetails from "./LocationDetails";
 
-
 function App(props) {
   const { location } = props;
   return (
@@ -28,7 +27,6 @@ function App(props) {
       My Weather Application
     </a>
   </header>
-</div>
+</div>;
 
 export default App;
-
