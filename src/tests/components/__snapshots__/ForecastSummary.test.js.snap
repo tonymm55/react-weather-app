@@ -18,6 +18,7 @@ exports[`ForecastSummary renders correctly 1`] = `
     </div>
     <div
       class="forecast-summary__icon"
+      data-testid="forecast-icon"
     >
       stubIcon
     </div>
