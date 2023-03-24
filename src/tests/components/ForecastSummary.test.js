@@ -29,7 +29,7 @@ describe("ForecastSummary", () => {
     date: 1111111,
     description: "Stub description",
     icon: "stubIcon",
-    temperature: "22°C", // temperature not as written, needs to be checked
+    temperature: "22°C",
   };
 
   it("renders correct values for props", () => {
