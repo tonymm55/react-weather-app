@@ -2,6 +2,42 @@
   margin: 0 20px;
 }
 
+.forecast-details {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.forecast-details__maxTemperature {
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.forecast-details__minTemperature {
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.forecast-details__wind {
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.forecast-details__humidity {
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.forecast-details__date {
+  font-weight: bold;
+  font-size: 1.5rem; 
+}
+
+
 .App-header {
   background-color: #282c34;
   /* background-color: #eceef1; */
