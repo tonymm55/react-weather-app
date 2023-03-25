@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { getAllByDisplayValue, getQueriesForElement, render } from "@testing-library/react";
 import ForecastSummary from "../../components/ForecastSummary";
 
 describe("ForecastSummary", () => {
@@ -48,8 +48,7 @@ describe("ForecastSummary", () => {
       "forecast-summary__description"
     );
     expect(getByTestId("forecast-icon")).toHaveClass("forecast-summary__icon");
-    expect(getAllByText("22°C")[0]).toHaveClass(
-      "forecast-summary__temperature"
-    );
+    expect(getAllByText("22°C")[0]).toHaveClass("forecast-summary__temperature");
+    expect(getAllByText("Thu Jan 01 1970")[0]).toHaveClass("forecast-summary__date");
   });
 });
