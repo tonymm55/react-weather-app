@@ -36,11 +36,20 @@ describe("ForecastSummary", () => {
       />
     );
 
-    expect(getAllByText("1111111")[0]).toHaveClass("forecast-summary__date");
+    expect(
+      getAllByText(
+        (content, element) =>
+          element.classList.contains("forecast-summary__date") &&
+          content.startsWith("Thu Jan 01")
+      )[0]
+    ).toBeInTheDocument();
+
     expect(getAllByText("Stub description")[0]).toHaveClass(
       "forecast-summary__description"
     );
     expect(getByTestId("forecast-icon")).toHaveClass("forecast-summary__icon");
-    expect(getAllByText("22°C")[0]).toHaveClass("forecast-summary__temperature");
+    expect(getAllByText("22°C")[0]).toHaveClass(
+      "forecast-summary__temperature"
+    );
   });
 });
