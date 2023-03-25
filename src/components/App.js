@@ -14,21 +14,4 @@ function App({ location, forecasts }) {
   );
 }
 
-<div>
-  <header className="App-header">
-    <h1>Weather App</h1>
-    <p>
-      Edit <code>src/App.js</code> and save to reload.
-    </p>
-    <a
-      className="App-link"
-      href="https://reactjs.org"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      My Weather Application
-    </a>
-  </header>
-</div>;
-
 export default App;
