@@ -1,6 +1,7 @@
 import React from "react";
 import iconData from "../data/iconData.json";
 
+// forecast summary component
 function ForecastSummary(props) {
   const { date, description, temperature, icon } = props;
   const weatherCode = `${icon.slice(0, 1)}00`;
@@ -16,6 +17,7 @@ function ForecastSummary(props) {
         &deg;C
       </div>
       <div className="forecast-summary__description">{description}</div>
+      <button type="button">More details</button>
     </div>
   );
 }

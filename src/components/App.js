@@ -1,15 +1,17 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-filename-extension */
-import React from "react";
+/* eslint-disable  no-unused-vars */
+import React, { useState } from "react";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
 
 import "../styles/App.css";
 
+// App Component
 function App({ location, forecasts }) {
-  const [selectedDate, setSelectedDate] = useState(foreacasts[0].date);
-  const selectedForecast = forecasts.find(foreacast => forecast.date === selectedDate);
+  const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
+  const selectedForecast = forecasts.find(forecast => forecasts.date === selectedDate);
   return (
     <div className="weather-app">
       <div className="forecast">
@@ -26,6 +28,10 @@ function App({ location, forecasts }) {
       </div>
     </div>
   );
+}
+
+function handleForecastSelect(date) {
+  setSelectedDate(date);
 }
 
 export default App;
