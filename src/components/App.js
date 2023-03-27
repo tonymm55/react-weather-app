@@ -6,8 +6,9 @@ import ForecastDetails from "./ForecastDetails";
 import "../styles/App.css";
 
 // App Component
-function App({ location, forecasts }) {
+function App({ forecasts, location }) {
   const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
+
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
@@ -15,6 +16,7 @@ function App({ location, forecasts }) {
   const handleForecastSelect = (date) => {
     setSelectedDate(date);
   };
+  console.log("selectedDate", selectedForecast);
 
   return (
     <div className="weather-app">
@@ -30,11 +32,11 @@ function App({ location, forecasts }) {
       <div className="forecast-details">
         <ForecastDetails
           // forecast={forecasts[0]}
-          date={forecasts[0].date}
-          temperature={forecasts[0].temperature}
-          humidity={forecasts[0].humidity}
-          wind={forecasts[0].wind}
           forecast={selectedForecast}
+          // date={forecasts[0].date}
+          // temperature={forecasts[0].temperature}
+          // humidity={forecasts[0].humidity}
+          // wind={forecasts[0].wind}
         />
       </div>
     </div>
