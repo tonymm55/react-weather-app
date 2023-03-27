@@ -8,6 +8,8 @@ import ForecastDetails from "./ForecastDetails";
 import "../styles/App.css";
 
 function App({ location, forecasts }) {
+  const [selectedDate, setSelectedDate] = useState(foreacasts[0].date);
+  const selectedForecast = forecasts.find(foreacast => forecast.date === selectedDate);
   return (
     <div className="weather-app">
       <div className="forecast">
