@@ -20,7 +20,7 @@ function ForecastSummary({ date, icon, temperature, description, onSelect }) {
       </div>
       <div className="forecast-summary__description">{description}</div>
       <button type="button" onClick={() => onSelect(date)}>
-        Click for more details
+        Click for details
       </button>
     </div>
   );

@@ -35,7 +35,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
       <button
         type="button"
       >
-        More Details
+        Click for details
       </button>
     </div>
     <div
@@ -68,7 +68,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
       <button
         type="button"
       >
-        More Details
+        Click for details
       </button>
     </div>
   </div>
