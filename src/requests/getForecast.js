@@ -1,13 +1,25 @@
 import axios from "axios";
 
-const getForecast = (setSelectedDate, setForecasts, setLocation) => {
-  const endpoint = "https://cmd-shift-weather-app.onrender.com/forecast";
+const getForecast = async (
+  searchText,
+  setSelectedDate,
+  setForecasts,
+  setLocation,
+) => {
+  let endpoint = "https://cmd-shift-weather-app.onrender.com/forecast";
 
-  axios.get(endpoint).then((response) => {
-    setSelectedDate(response.data.forecasts[0].date);
+  if (searchText) {
+    endpoint += `?city=${encodeURIComponent(searchText)}`;
+  }
+
+  try {
+    const response = await axios.get(endpoint);
+    setSelectedDate(response.data.forecasts.date);
     setForecasts(response.data.forecasts);
     setLocation(response.data.location);
-  });
+  } catch (error) {
+    console.error("Error fetching weather data", error);
+  }
 };
 
 export default getForecast;
