@@ -17,7 +17,7 @@ function App() {
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate,
   );
-
+  // initial render
   const dateProp = selectedForecast?.date;
   const temperatureProp = selectedForecast?.temperature;
   const humidityProp = selectedForecast?.humidity;
@@ -29,7 +29,11 @@ function App() {
   // console.log("selectedDate", selectedForecast);
 
   const handleCitySearch = () => {
-    getForecast(searchText, setSelectedDate, setForecasts, setLocation, setErrorMessage);
+    if (searchText === "") {
+      setSelectedDate(0);
+    } else {
+      getForecast(searchText, setSelectedDate, setForecasts, setLocation, setErrorMessage);
+    }
   };
 
   useEffect(() => {
@@ -52,21 +56,27 @@ function App() {
           handleCitySearch={handleCitySearch}
         />
       </div>
-      <div className="forecast-summaries-app">
-        <ForecastSummaries
-          forecasts={forecasts}
-          onForecastSelect={handleForecastSelect}
-        />
-      </div>
-      <div className="forecast-details">
-        <ForecastDetails
-          forecast={selectedForecast}
-          date={dateProp}
-          temperature={temperatureProp}
-          humidity={humidityProp}
-          wind={windProp}
-        />
-      </div>
+      {!errorMessage && (
+        <>
+          <div className="forecast-summaries-app">
+            <ForecastSummaries
+              forecasts={forecasts}
+              onForecastSelect={handleForecastSelect}
+            />
+          </div>
+          <div className="forecast-details">
+            {selectedForecast && (
+            <ForecastDetails
+              forecast={selectedForecast}
+              date={dateProp}
+              temperature={temperatureProp}
+              humidity={humidityProp}
+              wind={windProp}
+            />
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 }
