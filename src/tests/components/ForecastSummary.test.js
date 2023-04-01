@@ -21,7 +21,7 @@ describe("ForecastSummary", () => {
         icon={validProps.icon}
         temperature={validProps.temperature}
         onSelect={validProps.onSelect}
-      />
+      />,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -34,26 +34,25 @@ describe("ForecastSummary", () => {
         description={validProps.description}
         icon={validProps.icon}
         temperature={validProps.temperature}
-      />
+      />,
     );
 
     expect(
       getAllByText(
-        (content, element) =>
-          element.classList.contains("forecast-summary__date") &&
-          content.startsWith("Thu Jan 01")
-      )[0]
+        (content, element) => element.classList.contains("forecast-summary__date")
+          && content.startsWith("Thu Jan 01"),
+      )[0],
     ).toBeInTheDocument();
 
     expect(getAllByText("Stub description")[0]).toHaveClass(
-      "forecast-summary__description"
+      "forecast-summary__description",
     );
     expect(getByTestId("forecast-icon")).toHaveClass("forecast-summary__icon");
     expect(getAllByText("22°C")[0]).toHaveClass(
-      "forecast-summary__temperature"
+      "forecast-summary__temperature",
     );
     expect(getAllByText("Thu Jan 01 1970")[0]).toHaveClass(
-      "forecast-summary__date"
+      "forecast-summary__date",
     );
   });
 });

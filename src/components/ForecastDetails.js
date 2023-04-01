@@ -1,9 +1,9 @@
 import React from "react";
 
-function ForecastDetails({ forecast }) {
+function ForecastDetails(props) {
   const {
     date, temperature, humidity, wind,
-  } = forecast;
+  } = props;
   const formattedDate = new Date(date).toDateString();
 
   return (
