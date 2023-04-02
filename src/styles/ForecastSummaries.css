@@ -20,7 +20,4 @@
     color: black;
   }
 
-  .forecast-summary button:active {
-    background-color: white;
-    color: red !important;;
-  }
+

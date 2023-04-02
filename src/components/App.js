@@ -23,10 +23,8 @@ function App() {
   const humidityProp = selectedForecast?.humidity;
   const windProp = selectedForecast?.wind;
   const handleForecastSelect = (date) => {
-    // console.log("logging from app.js", date);
     setSelectedDate(date);
   };
-  // console.log("selectedDate", selectedForecast);
 
   const handleCitySearch = () => {
     if (searchText === "") {
