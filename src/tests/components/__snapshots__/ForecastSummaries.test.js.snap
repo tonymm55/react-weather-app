@@ -20,6 +20,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
       >
         <img
           alt="icon"
+          src="https://openweathermap.org/img/wn/01d@2x.png"
         />
       </div>
       <div
@@ -53,6 +54,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
       >
         <img
           alt="icon"
+          src="https://openweathermap.org/img/wn/13d@2x.png"
         />
       </div>
       <div

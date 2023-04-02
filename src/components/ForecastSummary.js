@@ -7,7 +7,7 @@ function ForecastSummary({
   date, icon, temperature, description, onSelect,
 }) {
   // const { date, icon, temperature, description, onSelect } = props;
-  console.log(icon, description);
+  // console.log(icon, description);
   const formattedDate = new Date(date).toDateString();
 
   return (

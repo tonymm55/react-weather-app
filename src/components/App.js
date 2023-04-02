@@ -40,14 +40,14 @@ function App() {
 
   return (
     <div className="weather-app">
-      <div className="location-details">
+      <div className="location-details" data-testid="location-details">
         <LocationDetails
           city={location.city}
           country={location.country}
           errorMessage={errorMessage}
         />
       </div>
-      <div className="search-form">
+      <div className="search-form" data-testid="search-form">
         <SearchForm
           searchText={searchText}
           setSearchText={setSearchText}
@@ -56,13 +56,13 @@ function App() {
       </div>
       {!errorMessage && (
         <>
-          <div className="forecast-summaries-app">
+          <div className="forecast-summaries-app" data-testid="forecast-summaries">
             <ForecastSummaries
               forecasts={forecasts}
               onForecastSelect={handleForecastSelect}
             />
           </div>
-          <div className="forecast-details">
+          <div className="forecast-details" data-testid="forecast-details">
             {selectedForecast && (
             <ForecastDetails
               forecast={selectedForecast}

@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import ForecastSummaries from "../components/ForecastSummaries";
+import ForecastSummaries from "../../components/ForecastSummaries";
 
 describe("ForecastSummaries", () => {
   const validProps = {
@@ -8,7 +8,7 @@ describe("ForecastSummaries", () => {
       {
         date: 1111111,
         description: "Stub description 1",
-        icon: "stubIcon1",
+        icon: 800,
         temperature: {
           max: 22,
           min: 12,
@@ -17,7 +17,7 @@ describe("ForecastSummaries", () => {
       {
         date: 2222222,
         description: "Stub description 2",
-        icon: "stubIcon2",
+        icon: 600,
         temperature: {
           max: 24,
           min: 13,
@@ -51,7 +51,7 @@ describe("renders correct values for props", () => {
     {
       date: 1111111,
       description: "Stub description",
-      icon: "stubIcon",
+      icon: 800,
       temperature: {
         max: 22,
         min: 12,
@@ -70,7 +70,7 @@ describe("ForecastSummaries", () => {
     {
       date: "2023-03-25",
       description: "Sunny",
-      icon: "800",
+      icon: 800,
       temperature: {
         max: 20,
         min: 10,
@@ -79,7 +79,7 @@ describe("ForecastSummaries", () => {
     {
       date: "2023-03-26",
       description: "Cloudy",
-      icon: "801",
+      icon: 600,
       temperature: {
         max: 18,
         min: 8,
