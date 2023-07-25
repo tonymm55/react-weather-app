@@ -1,6 +1,6 @@
 # Weather Forecast Web Application
 
-A simple weather forecast app, create using React on the Command Shift software engineer bootcamp. 
+A weather forecast app, created using React whilst on the Command Shift bootcamp. 
 
 The app uses the Open Weather API to retrieve and display 5-day weather forecast data for towns and cities in the United Kingdom.
 It includes detailed information such as: minimum and maximum temperature, humidity, wind direction and speed.
