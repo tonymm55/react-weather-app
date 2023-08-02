@@ -17,7 +17,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The inital render sometimes has as backtick, which goes away after a browser refresh.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 
